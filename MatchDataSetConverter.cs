@@ -1,4 +1,4 @@
-﻿using Entities;
+﻿using MatchEntities;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -7,14 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MatchDBI
+namespace MatchEntities
 {
 
     public static class MatchDataSetConverter
     {
-        public static MatchDataSet FromJson(string version, string json)
+        public static MatchDataSet FromJson(string json)
         {
-            throw new NotImplementedException();
+            MatchDataSet dataSet = JsonConvert.DeserializeObject<MatchDataSet>(json, new JsonSerializerSettings
+            {
+                TypeNameHandling = TypeNameHandling.Auto,
+                NullValueHandling = NullValueHandling.Ignore,
+            });
+
+            return dataSet;
         }
 
         /// <summary>
@@ -24,20 +30,19 @@ namespace MatchDBI
         /// <returns></returns>
         public static string ToJson(MatchDataSet dataSet)
         {
-                StringBuilder sb = new StringBuilder();
-                StringWriter sw = new StringWriter(sb);
-                JsonWriter jsonWriter = new JsonTextWriter(sw);
+            StringBuilder sb = new StringBuilder();
+            StringWriter sw = new StringWriter(sb);
+            JsonWriter jsonWriter = new JsonTextWriter(sw);
 
-                JsonSerializer serializer = new JsonSerializer();
-                serializer.Converters.Add(new Newtonsoft.Json.Converters.JavaScriptDateTimeConverter());
-                serializer.NullValueHandling = NullValueHandling.Ignore;
-                serializer.TypeNameHandling = TypeNameHandling.Auto;
-                serializer.Formatting = Formatting.Indented;
-                serializer.Serialize(jsonWriter, dataSet);
+            JsonSerializer serializer = new JsonSerializer();
+            serializer.Converters.Add(new Newtonsoft.Json.Converters.JavaScriptDateTimeConverter());
+            serializer.NullValueHandling = NullValueHandling.Ignore;
+            serializer.TypeNameHandling = TypeNameHandling.Auto;
+            serializer.Formatting = Formatting.Indented;
+            serializer.Serialize(jsonWriter, dataSet);
 
-                var json = sw.ToString();
-                return json;
-            
+            var json = sw.ToString();
+            return json;
         }
 
     }

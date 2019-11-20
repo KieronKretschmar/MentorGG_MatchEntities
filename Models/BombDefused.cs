@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Entities
+namespace MatchEntities
 {
     [Newtonsoft.Json.JsonObject]
     public partial class BombDefused : IMatchDataEntity

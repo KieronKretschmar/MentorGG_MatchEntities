@@ -57,7 +57,7 @@ namespace MatchEntities
         public int MoneyEarned2 { get; set; }
         public int MoneySpent1 { get; set; }
         public int MoneySpent2 { get; set; }
-        public int? AvgroundTime { get; set; }
+        public int? AvgRoundTime { get; set; }
         public int RoundTimer { get; set; }
         public int BombTimer { get; set; }
         public int StartMoney { get; set; }

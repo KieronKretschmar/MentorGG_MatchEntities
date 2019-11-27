@@ -18,6 +18,7 @@ namespace MatchEntities
             {
                 TypeNameHandling = TypeNameHandling.Auto,
                 NullValueHandling = NullValueHandling.Ignore,
+                DateFormatHandling = DateFormatHandling.IsoDateFormat
             });
 
             return dataSet;
@@ -38,6 +39,7 @@ namespace MatchEntities
             //serializer.Converters.Add(new Newtonsoft.Json.Converters.JavaScriptDateTimeConverter());
             serializer.NullValueHandling = NullValueHandling.Ignore;
             serializer.TypeNameHandling = TypeNameHandling.Auto;
+            serializer.DateFormatHandling = DateFormatHandling.IsoDateFormat;
             serializer.Formatting = Formatting.Indented;
             serializer.Serialize(jsonWriter, dataSet);
 

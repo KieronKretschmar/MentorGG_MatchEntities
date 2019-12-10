@@ -48,7 +48,6 @@ namespace MatchEntities
         public PlayerRoundStats VictimRoundStats { get; set; }
         public RoundStats RoundStats { get; set; }
         public Refrag Refrag { get; set; }
-        public Flashed AssistingFlash { get; set; }
         public ICollection<Refrag> RefraggedBy { get; set; }
     }
 }

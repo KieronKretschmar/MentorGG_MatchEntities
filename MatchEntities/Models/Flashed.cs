@@ -22,7 +22,6 @@ namespace MatchEntities
         public int AngleToCrosshair { get; set; }
 
         public Flash Flash { get; set; }
-        public Kill AssistedKill { get; set; }
         public MatchStats MatchStats { get; set; }
         public PlayerMatchStats PlayerMatchStats { get; set; }
         public PlayerRoundStats PlayerRoundStats { get; set; }

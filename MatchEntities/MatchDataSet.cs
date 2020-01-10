@@ -108,8 +108,9 @@ namespace MatchEntities
         }
 
         /// <summary>
-        /// Serializes object to JSON using the correct configuration.
+        /// Serializes object to JSON using the correct configuration, such that it can be deserialized without loss of information.
         /// </summary>
+        /// <param name="dataSet"></param>
         /// <returns></returns>
         public string ToJson()
         {
@@ -129,6 +130,18 @@ namespace MatchEntities
             JsonConvert.SerializeObject(this);
 
             return json;
+        }
+
+        public static MatchDataSet FromJson(string json)
+        {
+            MatchDataSet dataSet = JsonConvert.DeserializeObject<MatchDataSet>(json, new JsonSerializerSettings
+            {
+                TypeNameHandling = TypeNameHandling.Auto,
+                NullValueHandling = NullValueHandling.Ignore,
+                DateFormatHandling = DateFormatHandling.IsoDateFormat
+            });
+
+            return dataSet;
         }
 
         public void AssignMatchId(long matchId)

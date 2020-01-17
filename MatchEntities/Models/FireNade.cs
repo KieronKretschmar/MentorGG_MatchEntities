@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Numerics;
 
 namespace MatchEntities
 {
@@ -16,15 +17,51 @@ namespace MatchEntities
         public int Time { get; set; }
         public int Tick { get; set; }
         public long PlayerId { get; set; }
-        public float PlayerPosX { get; set; }
-        public float PlayerPosY { get; set; }
-        public float PlayerPosZ { get; set; }
+        private float PlayerPosX { get; set; }
+        private float PlayerPosY { get; set; }
+        private float PlayerPosZ { get; set; }
+        private Vector3 _playerPos;
+        public Vector3 PlayerPos
+        {
+            get
+            {
+                if (_playerPos == null)
+                    _playerPos = new Vector3(PlayerPosX, PlayerPosY, PlayerPosZ);
+
+                return _playerPos;
+            }
+
+            set
+            {
+                PlayerPosX = value.X;
+                PlayerPosY = value.Y;
+                PlayerPosZ = value.Z;
+            }
+        }
         public float PlayerViewX { get; set; }
         public float PlayerViewY { get; set; }
         public bool IsCt { get; set; }
-        public float GrenadePosX { get; set; }
-        public float GrenadePosY { get; set; }
-        public float GrenadePosZ { get; set; }
+        private float GrenadePosX { get; set; }
+        private float GrenadePosY { get; set; }
+        private float GrenadePosZ { get; set; }
+        private Vector3 _grenadePos;
+        public Vector3 GrenadePos
+        {
+            get
+            {
+                if (_grenadePos == null)
+                    _grenadePos = new Vector3(GrenadePosX, GrenadePosY, GrenadePosZ);
+
+                return _grenadePos;
+            }
+
+            set
+            {
+                GrenadePosX = value.X;
+                GrenadePosY = value.Y;
+                GrenadePosZ = value.Z;
+            }
+        }
         public byte NadeType { get; set; }
         public int DetonationZoneByTeam { get; set; }
         public string Trajectory { get; set; }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Numerics;
 
 namespace MatchEntities
 {
@@ -9,9 +10,27 @@ namespace MatchEntities
         public long GrenadeId { get; set; }
         public long VictimId { get; set; }
         public short Round { get; set; }
-        public float VictimPosX { get; set; }
-        public float VictimPosY { get; set; }
-        public float VictimPosZ { get; set; }
+        private float VictimPosX { get; set; }
+        private float VictimPosY { get; set; }
+        private float VictimPosZ { get; set; }
+        private Vector3 _victimPos;
+        public Vector3 VictimPos
+        {
+            get
+            {
+                if (_victimPos == null)
+                    _victimPos = new Vector3(VictimPosX, VictimPosY, VictimPosZ);
+
+                return _victimPos;
+            }
+
+            set
+            {
+                VictimPosX = value.X;
+                VictimPosY = value.Y;
+                VictimPosZ = value.Z;
+            }
+        }
         public float VictimViewX { get; set; }
         public float VictimViewY { get; set; }
         public bool IsCt { get; set; }

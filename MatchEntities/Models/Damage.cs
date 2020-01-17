@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Numerics;
 
 namespace MatchEntities
 {
@@ -16,14 +17,50 @@ namespace MatchEntities
         public int Time { get; set; }
         public int Tick { get; set; }
         public long PlayerId { get; set; }
-        public float PlayerPosX { get; set; }
-        public float PlayerPosY { get; set; }
-        public float PlayerPosZ { get; set; }
+        private float PlayerPosX { get; set; }
+        private float PlayerPosY { get; set; }
+        private float PlayerPosZ { get; set; }
+        private Vector3 _playerPos;
+        public Vector3 PlayerPos
+        {
+            get
+            {
+                if (_playerPos == null)
+                    _playerPos = new Vector3(PlayerPosX, PlayerPosY, PlayerPosZ);
+
+                return _playerPos;
+            }
+
+            set
+            {
+                PlayerPosX = value.X;
+                PlayerPosY = value.Y;
+                PlayerPosZ = value.Z;
+            }
+        }
         public bool IsCt { get; set; }
         public long VictimId { get; set; }
-        public float VictimPosX { get; set; }
-        public float VictimPosY { get; set; }
-        public float VictimPosZ { get; set; }
+        private float VictimPosX { get; set; }
+        private float VictimPosY { get; set; }
+        private float VictimPosZ { get; set; }
+        private Vector3 _victimPos;
+        public Vector3 VictimPos
+        {
+            get
+            {
+                if (_victimPos == null)
+                    _victimPos = new Vector3(VictimPosX, VictimPosY, VictimPosZ);
+
+                return _victimPos;
+            }
+
+            set
+            {
+                VictimPosX = value.X;
+                VictimPosY = value.Y;
+                VictimPosZ = value.Z;
+            }
+        }
         public int AmountHealth { get; set; }
         public int AmountHealthPotential { get; set; }
         public int AmountArmor { get; set; }

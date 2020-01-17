@@ -9,11 +9,11 @@ namespace MatchEntities
         public long GrenadeId { get; set; }
         public long VictimId { get; set; }
         public short Round { get; set; }
-        public double VictimPosX { get; set; }
-        public double VictimPosY { get; set; }
-        public double VictimPosZ { get; set; }
-        public double VictimViewX { get; set; }
-        public double VictimViewY { get; set; }
+        public float VictimPosX { get; set; }
+        public float VictimPosY { get; set; }
+        public float VictimPosZ { get; set; }
+        public float VictimViewX { get; set; }
+        public float VictimViewY { get; set; }
         public bool IsCt { get; set; }
         public int TimeFlashed { get; set; }
         public bool TeamAttack { get; set; }

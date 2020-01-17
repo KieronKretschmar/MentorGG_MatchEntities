@@ -10,9 +10,9 @@ namespace MatchEntities
         public int Time { get; set; }
         public int Tick { get; set; }
         public long PlayerId { get; set; }
-        public double PosX { get; set; }
-        public double PosY { get; set; }
-        public double PosZ { get; set; }
+        public float PosX { get; set; }
+        public float PosY { get; set; }
+        public float PosZ { get; set; }
 
         public MatchStats MatchStats { get; set; }
         public PlayerMatchStats PlayerMatchStats { get; set; }

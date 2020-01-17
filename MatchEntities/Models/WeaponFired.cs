@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Numerics;
 
 namespace MatchEntities
 {
@@ -16,18 +17,18 @@ namespace MatchEntities
         public int Time { get; set; }
         public int Tick { get; set; }
         public long PlayerId { get; set; }
-        public double PlayerPosX { get; set; }
-        public double PlayerPosY { get; set; }
-        public double PlayerPosZ { get; set; }
-        public double PlayerViewX { get; set; }
-        public double PlayerViewY { get; set; }
-        public double PlayerVeloX { get; set; }
-        public double PlayerVeloY { get; set; }
-        public double PlayerVeloZ { get; set; }
+        public float PlayerPosX { get; set; }
+        public float PlayerPosY { get; set; }
+        public float PlayerPosZ { get; set; }
+        public float PlayerViewX { get; set; }
+        public float PlayerViewY { get; set; }
+        public float PlayerVeloX { get; set; }
+        public float PlayerVeloY { get; set; }
+        public float PlayerVeloZ { get; set; }
         public bool IsCt { get; set; }
         public short Weapon { get; set; }
-        public double InAccuracyFromFiring { get; set; }
-        public double InAccuracyFromMoving { get; set; }
+        public float InAccuracyFromFiring { get; set; }
+        public float InAccuracyFromMoving { get; set; }
         public short PlayerState { get; set; }
 
         public MatchStats MatchStats { get; set; }

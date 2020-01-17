@@ -11,9 +11,9 @@ namespace MatchEntities
         public int Tick { get; set; }
         public long PlayerId { get; set; }
         public byte Site { get; set; }
-        public double PosX { get; set; }
-        public double PosY { get; set; }
-        public double PosZ { get; set; }
+        public float PosX { get; set; }
+        public float PosY { get; set; }
+        public float PosZ { get; set; }
         public int PlantZone { get; set; }
 
         public MatchStats MatchStats { get; set; }

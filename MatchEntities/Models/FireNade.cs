@@ -16,15 +16,15 @@ namespace MatchEntities
         public int Time { get; set; }
         public int Tick { get; set; }
         public long PlayerId { get; set; }
-        public double PlayerPosX { get; set; }
-        public double PlayerPosY { get; set; }
-        public double PlayerPosZ { get; set; }
-        public double PlayerViewX { get; set; }
-        public double PlayerViewY { get; set; }
+        public float PlayerPosX { get; set; }
+        public float PlayerPosY { get; set; }
+        public float PlayerPosZ { get; set; }
+        public float PlayerViewX { get; set; }
+        public float PlayerViewY { get; set; }
         public bool IsCt { get; set; }
-        public double GrenadePosX { get; set; }
-        public double GrenadePosY { get; set; }
-        public double GrenadePosZ { get; set; }
+        public float GrenadePosX { get; set; }
+        public float GrenadePosY { get; set; }
+        public float GrenadePosZ { get; set; }
         public byte NadeType { get; set; }
         public int DetonationZoneByTeam { get; set; }
         public string Trajectory { get; set; }

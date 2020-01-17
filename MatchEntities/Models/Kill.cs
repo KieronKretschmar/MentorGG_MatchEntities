@@ -16,23 +16,23 @@ namespace MatchEntities
         public int Time { get; set; }
         public int Tick { get; set; }
         public long PlayerId { get; set; }
-        public double PlayerPosX { get; set; }
-        public double PlayerPosY { get; set; }
-        public double PlayerPosZ { get; set; }
+        public float PlayerPosX { get; set; }
+        public float PlayerPosY { get; set; }
+        public float PlayerPosZ { get; set; }
         public short PlayerPrimary { get; set; }
         public short PlayerSecondary { get; set; }
         public bool IsCt { get; set; }
         public long VictimId { get; set; }
-        public double VictimPosX { get; set; }
-        public double VictimPosY { get; set; }
-        public double VictimPosZ { get; set; }
+        public float VictimPosX { get; set; }
+        public float VictimPosY { get; set; }
+        public float VictimPosZ { get; set; }
         public short VictimPrimary { get; set; }
         public short VictimSecondary { get; set; }
         public bool AssistByFlash { get; set; }
         public long? AssisterId { get; set; }
-        public double? AssisterPosX { get; set; }
-        public double? AssisterPosY { get; set; }
-        public double? AssisterPosZ { get; set; }
+        public float? AssisterPosX { get; set; }
+        public float? AssisterPosY { get; set; }
+        public float? AssisterPosZ { get; set; }
         public byte KillType { get; set; }
         public short Weapon { get; set; }
         public bool TeamKill { get; set; }

@@ -65,7 +65,7 @@ namespace MatchEntities
         public short SourceTickRate { get; set; }
         public string Source { get; set; }
         public byte GameType { get; set; }
-        public double? AvgRank { get; set; }
+        public float? AvgRank { get; set; }
         public short RealScore1 { get; set; }
         public short RealScore2 { get; set; }
         public string Event { get; set; }

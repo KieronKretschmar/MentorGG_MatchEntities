@@ -76,15 +76,15 @@ namespace MatchEntities
         public short SmokesUsed { get; set; }
         public short FirstBloods { get; set; }
         public short FirstBloodVictim { get; set; }
-        public double AvgTimeAlive { get; set; }
+        public float AvgTimeAlive { get; set; }
         public int TeamDamage { get; set; }
         public int TeamKills { get; set; }
         public int EntryKills { get; set; }
         public int EntryKillVictim { get; set; }
         public short Suicides { get; set; }
         public short BombVictim { get; set; }
-        public double HltvRating1 { get; set; }
-        public double HltvRating2 { get; set; }
+        public float HltvRating1 { get; set; }
+        public float HltvRating2 { get; set; }
         public byte RankBeforeMatch { get; set; }
         public byte RankAfterMatch { get; set; }
         public short RealKills { get; set; }

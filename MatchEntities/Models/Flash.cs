@@ -10,7 +10,6 @@ namespace MatchEntities
         {
             Flashed = new HashSet<Flashed>();
         } 
-        public int DetonationZoneByTeam { get; set; }
         public ICollection<Flashed> Flashed { get; set; }
     }
 }

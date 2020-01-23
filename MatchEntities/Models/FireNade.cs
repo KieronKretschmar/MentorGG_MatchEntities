@@ -12,7 +12,6 @@ namespace MatchEntities
         }
         //TODO OPTIONAL Remove either IsMolotov or NadeType
         public byte NadeType { get; set; }
-        public int DetonationZoneByTeam { get; set; }
         public bool IsMolotov { get; set; }
         public ICollection<Damage> Damage { get; set; }
     }

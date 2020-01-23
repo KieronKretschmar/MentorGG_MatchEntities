@@ -4,43 +4,15 @@ using System.Numerics;
 
 namespace MatchEntities
 {
-    public partial class Kill : IMatchDataEntity
+    public partial class Kill : PlayerEvent
     {
         public Kill()
         {
             RefraggedBy = new HashSet<Refrag>();
         }
-
-        public long MatchId { get; set; }
-        public long KillId { get; set; }
-        public short Round { get; set; }
-        public int Time { get; set; }
-        public int Tick { get; set; }
-        public long PlayerId { get; set; }
-        private float PlayerPosX { get; set; }
-        private float PlayerPosY { get; set; }
-        private float PlayerPosZ { get; set; }
-        private Vector3 _playerPos;
-        public Vector3 PlayerPos
-        {
-            get
-            {
-                if (_playerPos == null)
-                    _playerPos = new Vector3(PlayerPosX, PlayerPosY, PlayerPosZ);
-
-                return _playerPos;
-            }
-
-            set
-            {
-                PlayerPosX = value.X;
-                PlayerPosY = value.Y;
-                PlayerPosZ = value.Z;
-            }
-        }
+        
         public short PlayerPrimary { get; set; }
         public short PlayerSecondary { get; set; }
-        public bool IsCt { get; set; }
         public long VictimId { get; set; }
         private float VictimPosX { get; set; }
         private float VictimPosY { get; set; }
@@ -96,12 +68,6 @@ namespace MatchEntities
         public int? VictimZoneByTeam { get; set; }
 
         public Damage Damage { get; set; }
-        public MatchStats MatchStats { get; set; }
-        public PlayerMatchStats PlayerMatchStats { get; set; }
-        public PlayerMatchStats VictimMatchStats { get; set; }
-        public PlayerRoundStats PlayerRoundStats { get; set; }
-        public PlayerRoundStats VictimRoundStats { get; set; }
-        public RoundStats RoundStats { get; set; }
         public Refrag Refrag { get; set; }
         public ICollection<Refrag> RefraggedBy { get; set; }
     }

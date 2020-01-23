@@ -59,7 +59,7 @@ namespace MatchEntities
         }
         public int Category { get; set; }
         public int Target { get; set; }
-        public byte Result { get; set; }
+        public TargetResult Result { get; set; }
         public string Trajectory { get; set; }
 
         public MatchStats MatchStats { get; set; }

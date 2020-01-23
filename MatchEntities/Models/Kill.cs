@@ -35,6 +35,7 @@ namespace MatchEntities
                 VictimPosZ = value.Z;
             }
         }
+        public PlayerRoundStats VictimRoundStats { get; set; }
         public short VictimPrimary { get; set; }
         public short VictimSecondary { get; set; }
         public bool AssistByFlash { get; set; }

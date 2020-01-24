@@ -12,7 +12,19 @@ namespace MatchEntities
         public string Trajectory { get; set; }
         public int DetonationZoneByTeam { get; set; }
 
-       
-        public  Vector3 DetonationPosition => new Vector3(GrenadePosX, GrenadePosY, GrenadePosZ);
+
+        public Vector3 DetonationPosition
+        {
+            get
+            {
+                return new Vector3(GrenadePosX, GrenadePosY, GrenadePosZ);
+            }
+            set
+            {
+                GrenadePosX = value.X;
+                GrenadePosY = value.Y;
+                GrenadePosZ = value.Z;
+            }
+        }
     }
 }

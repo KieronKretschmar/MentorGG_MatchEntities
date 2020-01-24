@@ -12,7 +12,19 @@ namespace MatchEntities
         private float PlayerPosX { get; set; }
         private float PlayerPosY { get; set; }
         private float PlayerPosZ { get; set; }
-        public Vector3 PlayerPos => new Vector3(PlayerPosX, PlayerPosY, PlayerPosZ);
+        public Vector3 PlayerPos
+        {
+            get
+            {
+                return new Vector3(PlayerPosX, PlayerPosY, PlayerPosZ);
+            }
+            set
+            {
+                PlayerPosX = value.X;
+                PlayerPosY = value.Y;
+                PlayerPosZ = value.Z;
+            }
+        }
 
 
         public PlayerMatchStats PlayerMatchStats { get; set; }
@@ -23,6 +35,17 @@ namespace MatchEntities
     {
         private float PlayerViewX { get; set; }
         private float PlayerViewY { get; set; }
-        public Vector2 PlayerView => new Vector2(PlayerViewX,PlayerViewY);
+        public Vector2 PlayerView
+        {
+            get
+            {
+                return new Vector2(PlayerViewX, PlayerViewY);
+            }
+            set
+            {
+                PlayerViewX = value.X;
+                PlayerViewY = value.Y;
+            }
+        }
     }
 }

@@ -10,7 +10,7 @@ namespace MatchEntities
         {
             RefraggedBy = new HashSet<Refrag>();
         }
-        
+        public long Id;
         public short PlayerPrimary { get; set; }
         public short PlayerSecondary { get; set; }
         public long VictimId { get; set; }

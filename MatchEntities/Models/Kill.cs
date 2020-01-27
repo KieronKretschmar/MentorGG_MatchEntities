@@ -7,7 +7,7 @@ namespace MatchEntities
 {
     public partial class Kill : PlayerEvent
     {
-        public long Id;
+        public long KillId { get; set; }
         public short PlayerPrimary { get; set; }
         public short PlayerSecondary { get; set; }
         public long VictimId { get; set; }

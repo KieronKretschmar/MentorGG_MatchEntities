@@ -11,7 +11,7 @@ namespace MatchEntities
         {
             Kills = new HashSet<Kill>();
         }
-        public long Id;
+        public long DamageId { get; set; }
         public long VictimId { get; set; }
         private float VictimPosX { get; set; }
         private float VictimPosY { get; set; }

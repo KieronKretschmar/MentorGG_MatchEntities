@@ -53,5 +53,8 @@ namespace MatchEntities
         public He He { get; set; }
         public WeaponFired WeaponFired { get; set; }
         public ICollection<Kill> Kills { get; set; }
+        public PlayerMatchStats VictimMatchStats { get; set; }
+        public PlayerRoundStats VictimRoundStats { get; set; }
+
     }
 }

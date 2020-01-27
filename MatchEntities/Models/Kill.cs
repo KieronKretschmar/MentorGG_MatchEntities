@@ -32,7 +32,6 @@ namespace MatchEntities
                 VictimPosZ = value.Z;
             }
         }
-        public PlayerRoundStats VictimRoundStats { get; set; }
         public EquipmentElement VictimPrimary { get; set; }
         public EquipmentElement VictimSecondary { get; set; }
         public bool AssistByFlash { get; set; }
@@ -66,5 +65,7 @@ namespace MatchEntities
         public int? VictimZoneByTeam { get; set; }
 
         public Damage Damage { get; set; }
+        public PlayerMatchStats VictimMatchStats { get; set; }
+        public PlayerRoundStats VictimRoundStats { get; set; }
     }
 }

@@ -38,7 +38,7 @@ namespace MatchEntities
         public short Weapon { get; set; }
         public float InAccuracyFromFiring { get; set; }
         public float InAccuracyFromMoving { get; set; }
-        public short PlayerState { get; set; }
+        public bool IsDucking { get; set; }
 
         public ICollection<Damage> Damage { get; set; }
     }

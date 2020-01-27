@@ -6,10 +6,6 @@ namespace MatchEntities
 {
     public partial class Kill : PlayerEvent
     {
-        public Kill()
-        {
-            RefraggedBy = new HashSet<Refrag>();
-        }
         public long Id;
         public short PlayerPrimary { get; set; }
         public short PlayerSecondary { get; set; }
@@ -69,7 +65,5 @@ namespace MatchEntities
         public int? VictimZoneByTeam { get; set; }
 
         public Damage Damage { get; set; }
-        public Refrag Refrag { get; set; }
-        public ICollection<Refrag> RefraggedBy { get; set; }
     }
 }

@@ -28,7 +28,6 @@ namespace MatchEntities
             PlayerMatchStats = new HashSet<PlayerMatchStats>();
             PlayerPosition = new HashSet<PlayerPosition>();
             PlayerRoundStats = new HashSet<PlayerRoundStats>();
-            Refrag = new HashSet<Refrag>();
             RoundItem = new HashSet<RoundItem>();
             RoundStats = new HashSet<RoundStats>();
             Smoke = new HashSet<Smoke>();
@@ -91,7 +90,6 @@ namespace MatchEntities
         public ICollection<PlayerMatchStats> PlayerMatchStats { get; set; }
         public ICollection<PlayerPosition> PlayerPosition { get; set; }
         public ICollection<PlayerRoundStats> PlayerRoundStats { get; set; }
-        public ICollection<Refrag> Refrag { get; set; }
         public ICollection<RoundItem> RoundItem { get; set; }
         public ICollection<RoundStats> RoundStats { get; set; }
         public ICollection<Smoke> Smoke { get; set; }

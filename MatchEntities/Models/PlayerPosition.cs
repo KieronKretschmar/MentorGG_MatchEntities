@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MatchEntities.Enums;
+using System;
 using System.Collections.Generic;
 using System.Numerics;
 
@@ -27,6 +28,6 @@ namespace MatchEntities
                 PlayerVeloZ = value.Z;
             }
         }
-        public short Weapon { get; set; }
+        public EquipmentElement Weapon { get; set; }
     }
 }

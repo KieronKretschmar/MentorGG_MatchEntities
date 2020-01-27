@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MatchEntities.Enums;
+using System;
 using System.Collections.Generic;
 
 namespace MatchEntities
@@ -44,8 +45,7 @@ namespace MatchEntities
         public int GiftedValue { get; set; }
         public int ReceivedGiftValue { get; set; }
         public bool IsCt { get; set; }
-        public short ArmorType { get; set; }
-        public int PathId { get; set; }
+        public ArmorType ArmorType { get; set; }
         public short RoundStartKills { get; set; }
         public short RoundStartDeaths { get; set; }
         public short RoundStartAssists { get; set; }

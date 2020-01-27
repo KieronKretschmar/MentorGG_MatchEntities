@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MatchEntities.Enums;
+using System;
 using System.Collections.Generic;
 
 namespace MatchEntities
@@ -62,8 +63,8 @@ namespace MatchEntities
         public int StartMoney { get; set; }
         public short DemoTickRate { get; set; }
         public short SourceTickRate { get; set; }
-        public string Source { get; set; }
-        public byte GameType { get; set; }
+        public Source Source { get; set; }
+        public GameType GameType { get; set; }
         public float? AvgRank { get; set; }
         public short RealScore1 { get; set; }
         public short RealScore2 { get; set; }

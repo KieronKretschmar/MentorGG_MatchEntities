@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MatchEntities.Enums;
+using System;
 using System.Collections.Generic;
 using System.Numerics;
 
@@ -35,7 +36,7 @@ namespace MatchEntities
             }
         }
 
-        public short Weapon { get; set; }
+        public EquipmentElement Weapon { get; set; }
         public float InAccuracyFromFiring { get; set; }
         public float InAccuracyFromMoving { get; set; }
         public bool IsDucking { get; set; }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MatchEntities.Enums;
+using System;
 using System.Collections.Generic;
 using System.Numerics;
 
@@ -36,8 +37,8 @@ namespace MatchEntities
         public int AmountHealth { get; set; }
         public int AmountHealthPotential { get; set; }
         public int AmountArmor { get; set; }
-        public byte HitGroup { get; set; }
-        public short Weapon { get; set; }
+        public HitGroup HitGroup { get; set; }
+        public EquipmentElement Weapon { get; set; }
         public bool Fatal { get; set; }
         public bool TeamAttack { get; set; }
         public long? WeaponFiredId { get; set; }

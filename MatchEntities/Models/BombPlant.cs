@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MatchEntities.Enums;
+using System;
 using System.Collections.Generic;
 using System.Numerics;
 
@@ -11,7 +12,7 @@ namespace MatchEntities
         public int Time { get; set; }
         public int Tick { get; set; }
         public long PlayerId { get; set; }
-        public byte Site { get; set; }
+        public BombSite Site { get; set; }
         private float PosX { get; set; }
         private float PosY { get; set; }
         private float PosZ { get; set; }

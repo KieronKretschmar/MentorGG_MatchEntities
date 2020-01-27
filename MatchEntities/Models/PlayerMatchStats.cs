@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MatchEntities.Enums;
+using System;
 using System.Collections.Generic;
 
 namespace MatchEntities
@@ -85,8 +86,8 @@ namespace MatchEntities
         public short BombVictim { get; set; }
         public float HltvRating1 { get; set; }
         public float HltvRating2 { get; set; }
-        public byte RankBeforeMatch { get; set; }
-        public byte RankAfterMatch { get; set; }
+        public MatchMakingRank RankBeforeMatch { get; set; }
+        public MatchMakingRank RankAfterMatch { get; set; }
         public short RealKills { get; set; }
         public short RealDeaths { get; set; }
         public short RealAssists { get; set; }

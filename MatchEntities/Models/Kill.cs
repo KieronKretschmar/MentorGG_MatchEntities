@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MatchEntities.Enums;
+using System;
 using System.Collections.Generic;
 using System.Numerics;
 
@@ -32,8 +33,8 @@ namespace MatchEntities
             }
         }
         public PlayerRoundStats VictimRoundStats { get; set; }
-        public short VictimPrimary { get; set; }
-        public short VictimSecondary { get; set; }
+        public EquipmentElement VictimPrimary { get; set; }
+        public EquipmentElement VictimSecondary { get; set; }
         public bool AssistByFlash { get; set; }
         public long? AssisterId { get; set; }
         private float AssisterPosX { get; set; }
@@ -57,8 +58,8 @@ namespace MatchEntities
                 AssisterPosZ = value.Z;
             }
         }
-        public byte KillType { get; set; }
-        public short Weapon { get; set; }
+        public KillType KillType { get; set; }
+        public EquipmentElement Weapon { get; set; }
         public bool TeamKill { get; set; }
         public long? DamageId { get; set; }
         public int? PlayerZoneByTeam { get; set; }

@@ -12,6 +12,6 @@ namespace MatchEntities
         public int Target { get; set; }
         public TargetResult Result { get; set; }
 
-        public Vector3 DetonationPosition { get; set; }
+        public Vector3 DetonationPos { get; set; }
     }
 }

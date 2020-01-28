@@ -14,15 +14,11 @@ namespace MatchEntities
         private float PosX { get; set; }
         private float PosY { get; set; }
         private float PosZ { get; set; }
-        private Vector3 _pos;
         public Vector3 Pos
         {
             get
             {
-                if (_pos == null)
-                    _pos = new Vector3(PosX, PosY, PosZ);
-
-                return _pos;
+                return new Vector3(PosX, PosY, PosZ);
             }
 
             set

@@ -1,4 +1,5 @@
 ﻿using MatchEntities.Enums;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Numerics;
@@ -44,12 +45,19 @@ namespace MatchEntities
         public int? PlayerZoneByTeam { get; set; }
         public int? VictimZoneByTeam { get; set; }
 
+        [JsonIgnore]
         public Decoy Decoy { get; set; }
+        [JsonIgnore]
         public FireNade FireNade { get; set; }
+        [JsonIgnore]
         public He He { get; set; }
+        [JsonIgnore]
         public WeaponFired WeaponFired { get; set; }
+        [JsonIgnore]
         public ICollection<Kill> Kills { get; set; }
+        [JsonIgnore]
         public PlayerMatchStats VictimMatchStats { get; set; }
+        [JsonIgnore]
         public PlayerRoundStats VictimRoundStats { get; set; }
 
     }

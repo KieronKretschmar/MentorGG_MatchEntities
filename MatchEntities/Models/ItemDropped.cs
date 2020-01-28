@@ -1,4 +1,5 @@
 ﻿using MatchEntities.Enums;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
@@ -23,10 +24,15 @@ namespace MatchEntities
         public bool ByDeath { get; set; }
         public bool Gift { get; set; }
 
+        [JsonIgnore]
         public MatchStats MatchStats { get; set; }
+        [JsonIgnore]
         public PlayerMatchStats PlayerMatchStats { get; set; }
+        [JsonIgnore]
         public PlayerRoundStats PlayerRoundStats { get; set; }
+        [JsonIgnore]
         public RoundStats RoundStats { get; set; }
+        [JsonIgnore]
         public ICollection<ItemPickedUp> ItemPickedUp { get; set; }
     }
 }

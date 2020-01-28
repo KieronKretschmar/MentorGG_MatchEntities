@@ -1,4 +1,5 @@
 ﻿using MatchEntities.Enums;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Numerics;
@@ -37,6 +38,7 @@ namespace MatchEntities
         public float InAccuracyFromMoving { get; set; }
         public bool IsDucking { get; set; }
 
+        [JsonIgnore]
         public ICollection<Damage> Damage { get; set; }
     }
 }

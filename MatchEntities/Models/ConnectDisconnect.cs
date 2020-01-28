@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 
 namespace MatchEntities
@@ -12,8 +13,11 @@ namespace MatchEntities
         public int Time { get; set; }
         public bool Connect { get; set; }
 
+        [JsonIgnore]
         public MatchStats MatchStats { get; set; }
+        [JsonIgnore]
         public PlayerMatchStats PlayerMatchStats { get; set; }
+        [JsonIgnore]
         public RoundStats RoundStats { get; set; }
     }
 }

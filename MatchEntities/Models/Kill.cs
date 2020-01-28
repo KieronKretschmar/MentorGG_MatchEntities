@@ -8,8 +8,8 @@ namespace MatchEntities
     public partial class Kill : PlayerEvent
     {
         public long KillId { get; set; }
-        public short PlayerPrimary { get; set; }
-        public short PlayerSecondary { get; set; }
+        public EquipmentElement PlayerPrimary { get; set; }
+        public EquipmentElement PlayerSecondary { get; set; }
         public long VictimId { get; set; }
         private float VictimPosX { get; set; }
         private float VictimPosY { get; set; }

@@ -73,6 +73,7 @@ namespace MatchEntities
             var tablesList = new List<IEnumerable<IMatchDataEntity>>()
             {
                 new List<IMatchDataEntity>() { MatchStats as IMatchDataEntity },
+                new List<IMatchDataEntity>() { OverTimeStats as IMatchDataEntity },
                 PlayerMatchStatsList.Select(x=>x as IMatchDataEntity),
                 RoundStatsList.Select(x=>x as IMatchDataEntity),
                 PlayerRoundStatsList.Select(x=>x as IMatchDataEntity),
@@ -100,10 +101,6 @@ namespace MatchEntities
                 FlashList.Select(x=>x as IMatchDataEntity),
                 FlashedList.Select(x=>x as IMatchDataEntity),
             };
-            if (MatchStats.Score1 + MatchStats.Score2 > 30)
-            {
-                tablesList.Add(new List<IMatchDataEntity>() { OverTimeStats as IMatchDataEntity });
-            }
             return tablesList;
         }
 

@@ -61,7 +61,7 @@ namespace MatchEntities
 
         public List<Damage> DamageList = new List<Damage>();
 
-        public List<Kill> KillsList = new List<Kill>();
+        public List<Kill> KillList = new List<Kill>();
 
         public List<WeaponReload> WeaponReloadList = new List<WeaponReload>();
 
@@ -96,7 +96,7 @@ namespace MatchEntities
                 WeaponReloadList.Select(x=>x as IMatchDataEntity),
                 WeaponFiredList.Select(x=>x as IMatchDataEntity),
                 DamageList.Select(x=>x as IMatchDataEntity), // must be inserted after weaponFiredList due to FK_Damage_WeaponFired
-                KillsList.Select(x=>x as IMatchDataEntity), // must be inserted after damageList due to FK_Kills_Damage
+                KillList.Select(x=>x as IMatchDataEntity), // must be inserted after damageList due to FK_Kills_Damage
                 FlashList.Select(x=>x as IMatchDataEntity),
                 FlashedList.Select(x=>x as IMatchDataEntity),
             };

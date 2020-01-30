@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MatchEntities.Enums;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 
 namespace MatchEntities
@@ -85,39 +87,65 @@ namespace MatchEntities
         public short BombVictim { get; set; }
         public float HltvRating1 { get; set; }
         public float HltvRating2 { get; set; }
-        public byte RankBeforeMatch { get; set; }
-        public byte RankAfterMatch { get; set; }
+        public MatchMakingRank RankBeforeMatch { get; set; }
+        public MatchMakingRank RankAfterMatch { get; set; }
         public short RealKills { get; set; }
         public short RealDeaths { get; set; }
         public short RealAssists { get; set; }
         public short RealScore { get; set; }
         public short RealMvps { get; set; }
 
+        [JsonIgnore]
         public MatchStats MatchStats { get; set; }
+        [JsonIgnore]
         public ICollection<BombDefused> BombDefused { get; set; }
+        [JsonIgnore]
         public ICollection<BombPlant> BombPlant { get; set; }
+        [JsonIgnore]
         public ICollection<BotTakeOver> BotTakeOver { get; set; }
+        [JsonIgnore]
         public ICollection<ConnectDisconnect> ConnectDisconnect { get; set; }
+        [JsonIgnore]
         public ICollection<Damage> Damages { get; set; }
+        [JsonIgnore]
         public ICollection<Damage> DamagesReceived { get; set; }
+        [JsonIgnore]
         public ICollection<Decoy> Decoy { get; set; }
+        [JsonIgnore]
         public ICollection<FireNade> FireNade { get; set; }
+        [JsonIgnore]
         public ICollection<Flash> Flash { get; set; }
+        [JsonIgnore]
         public ICollection<Flashed> Flashed { get; set; }
+        [JsonIgnore]
         public ICollection<He> He { get; set; }
+        [JsonIgnore]
         public ICollection<HostageDrop> HostageDrop { get; set; }
+        [JsonIgnore]
         public ICollection<HostagePickUp> HostagePickUp { get; set; }
+        [JsonIgnore]
         public ICollection<HostageRescue> HostageRescue { get; set; }
+        [JsonIgnore]
         public ICollection<ItemDropped> ItemDropped { get; set; }
+        [JsonIgnore]
         public ICollection<ItemPickedUp> ItemPickedUp { get; set; }
+        [JsonIgnore]
         public ICollection<ItemSaved> ItemSaved { get; set; }
+        [JsonIgnore]
         public ICollection<Kill> Kills { get; set; }
+        [JsonIgnore]
         public ICollection<Kill> Deaths { get; set; }
+        [JsonIgnore]
         public ICollection<PlayerPosition> PlayerPosition { get; set; }
+        [JsonIgnore]
         public ICollection<PlayerRoundStats> PlayerRoundStats { get; set; }
+        [JsonIgnore]
         public ICollection<RoundItem> RoundItem { get; set; }
+        [JsonIgnore]
         public ICollection<Smoke> Smoke { get; set; }
+        [JsonIgnore]
         public ICollection<WeaponFired> WeaponFired { get; set; }
+        [JsonIgnore]
         public ICollection<WeaponReload> WeaponReload { get; set; }
     }
 }

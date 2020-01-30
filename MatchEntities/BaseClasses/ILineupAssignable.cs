@@ -2,13 +2,16 @@
 using System;
 using System.Collections.Generic;
 using System.Numerics;
+using System.Text;
 
 namespace MatchEntities
 {
-    public partial class Smoke : Grenade, IMatchDataEntity, ILineupAssignable
+    public interface ILineupAssignable
     {
         public int LineUp { get; set; }
         public int Target { get; set; }
         public TargetResult Result { get; set; }
+
+        public Vector3 DetonationPos { get; set; }
     }
 }

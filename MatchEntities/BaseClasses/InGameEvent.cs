@@ -1,10 +1,11 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace MatchEntities
 {
-    public partial class BombExplosion : IMatchDataEntity
+    public abstract class InGameEvent: IMatchDataEntity
     {
         public long MatchId { get; set; }
         public short Round { get; set; }

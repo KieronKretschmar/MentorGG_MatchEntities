@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Numerics;
 
@@ -14,15 +15,11 @@ namespace MatchEntities
         private float PosX { get; set; }
         private float PosY { get; set; }
         private float PosZ { get; set; }
-        private Vector3 _pos;
         public Vector3 Pos
         {
             get
             {
-                if (_pos == null)
-                    _pos = new Vector3(PosX, PosY, PosZ);
-
-                return _pos;
+                return new Vector3(PosX, PosY, PosZ);
             }
 
             set
@@ -33,9 +30,13 @@ namespace MatchEntities
             }
         }
 
+        [JsonIgnore]
         public MatchStats MatchStats { get; set; }
+        [JsonIgnore]
         public PlayerMatchStats PlayerMatchStats { get; set; }
+        [JsonIgnore]
         public PlayerRoundStats PlayerRoundStats { get; set; }
+        [JsonIgnore]
         public RoundStats RoundStats { get; set; }
     }
 }

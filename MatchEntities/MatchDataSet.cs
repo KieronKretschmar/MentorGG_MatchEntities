@@ -61,7 +61,7 @@ namespace MatchEntities
 
         public List<Damage> DamageList = new List<Damage>();
 
-        public List<Kill> KillsList = new List<Kill>();
+        public List<Kill> KillList = new List<Kill>();
 
         public List<WeaponReload> WeaponReloadList = new List<WeaponReload>();
 
@@ -73,6 +73,7 @@ namespace MatchEntities
             var tablesList = new List<IEnumerable<IMatchDataEntity>>()
             {
                 new List<IMatchDataEntity>() { MatchStats as IMatchDataEntity },
+                new List<IMatchDataEntity>() { OverTimeStats as IMatchDataEntity },
                 PlayerMatchStatsList.Select(x=>x as IMatchDataEntity),
                 RoundStatsList.Select(x=>x as IMatchDataEntity),
                 PlayerRoundStatsList.Select(x=>x as IMatchDataEntity),
@@ -96,14 +97,10 @@ namespace MatchEntities
                 WeaponReloadList.Select(x=>x as IMatchDataEntity),
                 WeaponFiredList.Select(x=>x as IMatchDataEntity),
                 DamageList.Select(x=>x as IMatchDataEntity), // must be inserted after weaponFiredList due to FK_Damage_WeaponFired
-                KillsList.Select(x=>x as IMatchDataEntity), // must be inserted after damageList due to FK_Kills_Damage
+                KillList.Select(x=>x as IMatchDataEntity), // must be inserted after damageList due to FK_Kills_Damage
                 FlashList.Select(x=>x as IMatchDataEntity),
                 FlashedList.Select(x=>x as IMatchDataEntity),
             };
-            if (MatchStats.Score1 + MatchStats.Score2 > 30)
-            {
-                tablesList.Add(new List<IMatchDataEntity>() { OverTimeStats as IMatchDataEntity });
-            }
             return tablesList;
         }
 
@@ -119,7 +116,7 @@ namespace MatchEntities
             JsonWriter jsonWriter = new JsonTextWriter(sw);
 
             JsonSerializer serializer = new JsonSerializer();
-            serializer.Converters.Add(new Newtonsoft.Json.Converters.JavaScriptDateTimeConverter());
+            serializer.DateFormatHandling = DateFormatHandling.IsoDateFormat;
             serializer.NullValueHandling = NullValueHandling.Ignore;
             serializer.TypeNameHandling = TypeNameHandling.Auto;
             serializer.Formatting = Formatting.Indented;

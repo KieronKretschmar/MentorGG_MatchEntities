@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MatchEntities.Enums;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Numerics;
 
@@ -16,15 +18,11 @@ namespace MatchEntities
         private float PlayerVeloX { get; set; }
         private float PlayerVeloY { get; set; }
         private float PlayerVeloZ { get; set; }
-        private Vector3 _playerVelo;
         public Vector3 PlayerVelo
         {
             get
             {
-                if (_playerVelo == null)
-                    _playerVelo = new Vector3(PlayerVeloX, PlayerVeloY, PlayerVeloZ);
-
-                return _playerVelo;
+                return new Vector3(PlayerVeloX, PlayerVeloY, PlayerVeloZ);
             }
 
             set
@@ -35,11 +33,12 @@ namespace MatchEntities
             }
         }
 
-        public short Weapon { get; set; }
+        public EquipmentElement Weapon { get; set; }
         public float InAccuracyFromFiring { get; set; }
         public float InAccuracyFromMoving { get; set; }
-        public short PlayerState { get; set; }
+        public bool IsDucking { get; set; }
 
+        [JsonIgnore]
         public ICollection<Damage> Damage { get; set; }
     }
 }

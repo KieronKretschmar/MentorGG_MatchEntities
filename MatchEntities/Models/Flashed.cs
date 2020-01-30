@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Numerics;
 
@@ -13,15 +14,11 @@ namespace MatchEntities
         private float VictimPosX { get; set; }
         private float VictimPosY { get; set; }
         private float VictimPosZ { get; set; }
-        private Vector3 _victimPos;
         public Vector3 VictimPos
         {
             get
             {
-                if (_victimPos == null)
-                    _victimPos = new Vector3(VictimPosX, VictimPosY, VictimPosZ);
-
-                return _victimPos;
+                return new Vector3(VictimPosX, VictimPosY, VictimPosZ);
             }
 
             set
@@ -40,10 +37,15 @@ namespace MatchEntities
         public int? TimeUntilAssistedKill { get; set; }
         public int AngleToCrosshair { get; set; }
 
+        [JsonIgnore]
         public Flash Flash { get; set; }
+        [JsonIgnore]
         public MatchStats MatchStats { get; set; }
+        [JsonIgnore]
         public PlayerMatchStats PlayerMatchStats { get; set; }
+        [JsonIgnore]
         public PlayerRoundStats PlayerRoundStats { get; set; }
+        [JsonIgnore]
         public RoundStats RoundStats { get; set; }
     }
 }

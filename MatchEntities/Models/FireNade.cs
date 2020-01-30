@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Numerics;
 
@@ -10,9 +11,13 @@ namespace MatchEntities
         {
             Damage = new HashSet<Damage>();
         }
-        //TODO OPTIONAL Remove either IsMolotov or NadeType
-        public byte NadeType { get; set; }
+
+        /// <summary>
+        /// True for molotovs, false for incendiary grenades.
+        /// </summary>
         public bool IsMolotov { get; set; }
+
+        [JsonIgnore]
         public ICollection<Damage> Damage { get; set; }
     }
 }

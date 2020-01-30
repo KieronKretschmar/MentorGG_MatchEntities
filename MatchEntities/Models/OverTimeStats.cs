@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 
 namespace MatchEntities
@@ -11,6 +12,7 @@ namespace MatchEntities
         public int StartMoney { get; set; }
         public short NumRounds { get; set; }
 
+        [JsonIgnore]
         public MatchStats MatchStats { get; set; }
     }
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MatchEntities.Enums;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Numerics;
 
@@ -10,20 +12,16 @@ namespace MatchEntities
         {
             Kills = new HashSet<Kill>();
         }
-        public long Id;
+        public long DamageId { get; set; }
         public long VictimId { get; set; }
         private float VictimPosX { get; set; }
         private float VictimPosY { get; set; }
         private float VictimPosZ { get; set; }
-        private Vector3 _victimPos;
         public Vector3 VictimPos
         {
             get
             {
-                if (_victimPos == null)
-                    _victimPos = new Vector3(VictimPosX, VictimPosY, VictimPosZ);
-
-                return _victimPos;
+                return new Vector3(VictimPosX, VictimPosY, VictimPosZ);
             }
 
             set
@@ -36,8 +34,8 @@ namespace MatchEntities
         public int AmountHealth { get; set; }
         public int AmountHealthPotential { get; set; }
         public int AmountArmor { get; set; }
-        public byte HitGroup { get; set; }
-        public short Weapon { get; set; }
+        public HitGroup HitGroup { get; set; }
+        public EquipmentElement Weapon { get; set; }
         public bool Fatal { get; set; }
         public bool TeamAttack { get; set; }
         public long? WeaponFiredId { get; set; }
@@ -47,10 +45,20 @@ namespace MatchEntities
         public int? PlayerZoneByTeam { get; set; }
         public int? VictimZoneByTeam { get; set; }
 
+        [JsonIgnore]
         public Decoy Decoy { get; set; }
+        [JsonIgnore]
         public FireNade FireNade { get; set; }
+        [JsonIgnore]
         public He He { get; set; }
+        [JsonIgnore]
         public WeaponFired WeaponFired { get; set; }
+        [JsonIgnore]
         public ICollection<Kill> Kills { get; set; }
+        [JsonIgnore]
+        public PlayerMatchStats VictimMatchStats { get; set; }
+        [JsonIgnore]
+        public PlayerRoundStats VictimRoundStats { get; set; }
+
     }
 }

@@ -6,24 +6,24 @@ namespace MatchEntities
     {
         public long GrenadeId { get; set; }
 
-        private float GrenadePosX { get; set; }
-        private float GrenadePosY { get; set; }
-        private float GrenadePosZ { get; set; }
+        private float DetonationPosX { get; set; }
+        private float DetonationPosY { get; set; }
+        private float DetonationPosZ { get; set; }
         public string Trajectory { get; set; }
         public int DetonationZoneByTeam { get; set; }
 
 
-        public Vector3 DetonationPosition
+        public Vector3 DetonationPos
         {
             get
             {
-                return new Vector3(GrenadePosX, GrenadePosY, GrenadePosZ);
+                return new Vector3(DetonationPosX, DetonationPosY, DetonationPosZ);
             }
             set
             {
-                GrenadePosX = value.X;
-                GrenadePosY = value.Y;
-                GrenadePosZ = value.Z;
+                DetonationPosX = value.X;
+                DetonationPosY = value.Y;
+                DetonationPosZ = value.Z;
             }
         }
     }

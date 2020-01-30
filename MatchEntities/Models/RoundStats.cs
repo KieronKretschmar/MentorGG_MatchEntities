@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 
 namespace MatchEntities
@@ -50,30 +51,55 @@ namespace MatchEntities
         public int CtBuyStrat { get; set; }
         public int TBuyStrat { get; set; }
 
+        [JsonIgnore]
         public MatchStats MatchStats { get; set; }
+        [JsonIgnore]
         public BombDefused BombDefused { get; set; }
+        [JsonIgnore]
         public BombExplosion BombExplosion { get; set; }
+        [JsonIgnore]
         public BombPlant BombPlant { get; set; }
+        [JsonIgnore]
         public ICollection<BotTakeOver> BotTakeOver { get; set; }
+        [JsonIgnore]
         public ICollection<ConnectDisconnect> ConnectDisconnect { get; set; }
+        [JsonIgnore]
         public ICollection<Damage> Damage { get; set; }
+        [JsonIgnore]
         public ICollection<Decoy> Decoy { get; set; }
+        [JsonIgnore]
         public ICollection<FireNade> FireNade { get; set; }
+        [JsonIgnore]
         public ICollection<Flash> Flash { get; set; }
+        [JsonIgnore]
         public ICollection<Flashed> Flashed { get; set; }
+        [JsonIgnore]
         public ICollection<He> He { get; set; }
+        [JsonIgnore]
         public ICollection<HostageDrop> HostageDrop { get; set; }
+        [JsonIgnore]
         public ICollection<HostagePickUp> HostagePickUp { get; set; }
+        [JsonIgnore]
         public ICollection<HostageRescue> HostageRescue { get; set; }
+        [JsonIgnore]
         public ICollection<ItemDropped> ItemDropped { get; set; }
+        [JsonIgnore]
         public ICollection<ItemPickedUp> ItemPickedUp { get; set; }
+        [JsonIgnore]
         public ICollection<ItemSaved> ItemSaved { get; set; }
+        [JsonIgnore]
         public ICollection<Kill> Kills { get; set; }
+        [JsonIgnore]
         public ICollection<PlayerPosition> PlayerPosition { get; set; }
+        [JsonIgnore]
         public ICollection<PlayerRoundStats> PlayerRoundStats { get; set; }
+        [JsonIgnore]
         public ICollection<RoundItem> RoundItem { get; set; }
+        [JsonIgnore]
         public ICollection<Smoke> Smoke { get; set; }
+        [JsonIgnore]
         public ICollection<WeaponFired> WeaponFired { get; set; }
+        [JsonIgnore]
         public ICollection<WeaponReload> WeaponReload { get; set; }
     }
 }

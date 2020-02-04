@@ -36,7 +36,7 @@ namespace MatchEntities
         public byte WinnerTeam { get; set; }
         public bool OriginalSide { get; set; }
         public bool BombPlanted { get; set; }
-        public byte? WinType { get; set; }
+        public byte WinType { get; set; }
         public int RoundTime { get; set; }
         public int StartTime { get; set; }
         public int EndTime { get; set; }

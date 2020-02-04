@@ -38,7 +38,7 @@ namespace MatchEntities
 
         public long MatchId { get; set; }
         public long SteamId { get; set; }
-        public byte Team { get; set; }
+        public StartingFaction Team { get; set; }
         public short KillCount { get; set; }
         public short AssistCount { get; set; }
         public short DeathCount { get; set; }

@@ -135,7 +135,10 @@ namespace MatchEntities
             {
                 TypeNameHandling = TypeNameHandling.Auto,
                 NullValueHandling = NullValueHandling.Ignore,
-                DateFormatHandling = DateFormatHandling.IsoDateFormat
+                DateFormatHandling = DateFormatHandling.IsoDateFormat,
+                
+                // this setting is required so that the setter for MatchStats.TeamStats is called on deserialization
+                ObjectCreationHandling = ObjectCreationHandling.Replace,
             });
 
             return dataSet;

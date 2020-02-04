@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using MatchEntities.Enums;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
@@ -33,7 +34,7 @@ namespace MatchEntities
 
         public long MatchId { get; set; }
         public short Round { get; set; }
-        public byte WinnerTeam { get; set; }
+        public StartingFaction WinnerTeam { get; set; }
         public bool OriginalSide { get; set; }
         public bool BombPlanted { get; set; }
         public byte WinType { get; set; }

@@ -4,10 +4,10 @@ using System.Text;
 
 namespace MatchEntities.Enums
 {
-	/// <summary>
-	/// Copied from RabbitTransfer. Keep in sync when applying changes to either of them.
-	/// </summary>
-	public enum Source : byte
+    /// <summary>
+    /// Copied from RabbitCommunicationLib and EquipmentLib. Keep in sync when applying changes to either of them.
+    /// </summary>
+    public enum Source : byte
     {
         Unknown = 0,
         Valve = 1,

@@ -38,7 +38,6 @@ namespace MatchEntities
         }
 
         public long MatchId { get; set; }
-        public long DemoId { get; set; }
         public DateTime MatchDate { get; set; } = new DateTime(2000);
         public string Map { get; set; }
         public byte WinnerTeam { get; set; }

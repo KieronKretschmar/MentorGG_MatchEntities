@@ -46,19 +46,19 @@ namespace MatchEntities
         public int? VictimZoneByTeam { get; set; }
 
         [JsonIgnore]
-        public Decoy Decoy { get; set; }
+        public virtual Decoy Decoy { get; set; }
         [JsonIgnore]
-        public FireNade FireNade { get; set; }
+        public virtual FireNade FireNade { get; set; }
         [JsonIgnore]
-        public He He { get; set; }
+        public virtual He He { get; set; }
         [JsonIgnore]
-        public WeaponFired WeaponFired { get; set; }
+        public virtual WeaponFired WeaponFired { get; set; }
         [JsonIgnore]
-        public ICollection<Kill> Kills { get; set; }
+        public virtual ICollection<Kill> Kills { get; set; }
         [JsonIgnore]
-        public PlayerMatchStats VictimMatchStats { get; set; }
+        public virtual PlayerMatchStats VictimMatchStats { get; set; }
         [JsonIgnore]
-        public PlayerRoundStats VictimRoundStats { get; set; }
+        public virtual PlayerRoundStats VictimRoundStats { get; set; }
 
     }
 }

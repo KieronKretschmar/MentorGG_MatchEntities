@@ -39,6 +39,6 @@ namespace MatchEntities
         public bool IsDucking { get; set; }
 
         [JsonIgnore]
-        public ICollection<Damage> Damage { get; set; }
+        public virtual ICollection<Damage> Damage { get; set; }
     }
 }

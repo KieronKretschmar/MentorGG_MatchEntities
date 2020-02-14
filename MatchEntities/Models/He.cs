@@ -13,6 +13,6 @@ namespace MatchEntities
         }
 
         [JsonIgnore]
-        public ICollection<Damage> Damage { get; set; }
+        public virtual ICollection<Damage> Damage { get; set; }
     }
 }

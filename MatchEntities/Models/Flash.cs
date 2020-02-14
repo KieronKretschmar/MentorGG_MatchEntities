@@ -13,6 +13,6 @@ namespace MatchEntities
         }
 
         [JsonIgnore]
-        public ICollection<Flashed> Flashed { get; set; }
+        public virtual ICollection<Flashed> Flashed { get; set; }
     }
 }

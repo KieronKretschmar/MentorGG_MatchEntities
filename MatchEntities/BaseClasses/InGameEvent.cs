@@ -13,8 +13,8 @@ namespace MatchEntities
         public int Tick { get; set; }
 
         [JsonIgnore]
-        public MatchStats MatchStats { get; set; }
+        public virtual MatchStats MatchStats { get; set; }
         [JsonIgnore]
-        public RoundStats RoundStats { get; set; }
+        public virtual RoundStats RoundStats { get; set; }
     }
 }

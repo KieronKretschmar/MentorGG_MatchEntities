@@ -58,10 +58,10 @@ namespace MatchEntities
         public int? VictimZoneByTeam { get; set; }
 
         [JsonIgnore]
-        public Damage Damage { get; set; }
+        public virtual Damage Damage { get; set; }
         [JsonIgnore]
-        public PlayerMatchStats VictimMatchStats { get; set; }
+        public virtual PlayerMatchStats VictimMatchStats { get; set; }
         [JsonIgnore]
-        public PlayerRoundStats VictimRoundStats { get; set; }
+        public virtual PlayerRoundStats VictimRoundStats { get; set; }
     }
 }

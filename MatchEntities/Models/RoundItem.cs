@@ -15,12 +15,12 @@ namespace MatchEntities
         public short Equipment { get; set; }
 
         [JsonIgnore]
-        public MatchStats MatchStats { get; set; }
+        public virtual MatchStats MatchStats { get; set; }
         [JsonIgnore]
-        public PlayerMatchStats PlayerMatchStats { get; set; }
+        public virtual PlayerMatchStats PlayerMatchStats { get; set; }
         [JsonIgnore]
-        public PlayerRoundStats PlayerRoundStats { get; set; }
+        public virtual PlayerRoundStats PlayerRoundStats { get; set; }
         [JsonIgnore]
-        public RoundStats RoundStats { get; set; }
+        public virtual RoundStats RoundStats { get; set; }
     }
 }

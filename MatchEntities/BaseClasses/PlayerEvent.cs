@@ -29,9 +29,9 @@ namespace MatchEntities
 
 
         [JsonIgnore]
-        public PlayerMatchStats PlayerMatchStats { get; set; }
+        public virtual PlayerMatchStats PlayerMatchStats { get; set; }
         [JsonIgnore]
-        public PlayerRoundStats PlayerRoundStats { get; set; }
+        public virtual PlayerRoundStats PlayerRoundStats { get; set; }
     }
 
     public abstract class PlayerViewEvent : PlayerEvent

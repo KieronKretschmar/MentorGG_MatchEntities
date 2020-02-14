@@ -18,6 +18,6 @@ namespace MatchEntities
         public bool IsMolotov { get; set; }
 
         [JsonIgnore]
-        public ICollection<Damage> Damage { get; set; }
+        public virtual ICollection<Damage> Damage { get; set; }
     }
 }

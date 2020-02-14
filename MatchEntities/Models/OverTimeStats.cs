@@ -13,6 +13,6 @@ namespace MatchEntities
         public short NumRounds { get; set; }
 
         [JsonIgnore]
-        public MatchStats MatchStats { get; set; }
+        public virtual MatchStats MatchStats { get; set; }
     }
 }

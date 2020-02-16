@@ -148,6 +148,11 @@ namespace MatchEntities
         public float? AvgRank { get; set; }
         public string Event { get; set; }
 
+        /// <summary>
+        /// Owned entity
+        /// </summary>
+        public virtual AnalyzerConfig Config { get; set; }
+
         [JsonIgnore]
         public virtual OverTimeStats OverTimeStats { get; set; }
         [JsonIgnore]

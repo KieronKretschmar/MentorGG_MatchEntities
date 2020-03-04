@@ -5,12 +5,15 @@ using System.Text;
 
 namespace MatchEntities
 {
-    public class AnalyzerConfig
+    /// <summary>
+    /// Database model for the settings which DemoAnalyzer used to analyzed a demo.
+    /// </summary>
+    public class AnalyzerConfigDatabaseModel
     {
         public AnalyzerQuality Quality { get; set; }
         public double FramesPerSecond { get; set; }
 
-        public AnalyzerConfig(AnalyzerQuality quality, double framesPerSecond)
+        public AnalyzerConfigDatabaseModel(AnalyzerQuality quality, double framesPerSecond)
         {
             Quality = quality;
             FramesPerSecond = framesPerSecond;

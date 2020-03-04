@@ -151,7 +151,7 @@ namespace MatchEntities
         /// <summary>
         /// Owned entity
         /// </summary>
-        public virtual AnalyzerConfig Config { get; set; }
+        public virtual AnalyzerConfigDatabaseModel Config { get; set; }
 
         [JsonIgnore]
         public virtual OverTimeStats OverTimeStats { get; set; }

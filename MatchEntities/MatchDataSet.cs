@@ -111,22 +111,16 @@ namespace MatchEntities
         /// <returns></returns>
         public string ToJson()
         {
-            StringBuilder sb = new StringBuilder();
-            StringWriter sw = new StringWriter(sb);
-            JsonWriter jsonWriter = new JsonTextWriter(sw);
-
-            JsonSerializer serializer = new JsonSerializer();
-            serializer.DateFormatHandling = DateFormatHandling.IsoDateFormat;
-            serializer.NullValueHandling = NullValueHandling.Ignore;
-            serializer.TypeNameHandling = TypeNameHandling.Auto;
-            serializer.Formatting = Formatting.Indented;
-            serializer.Serialize(jsonWriter, this);
-
-            var json = sw.ToString();
-
-            JsonConvert.SerializeObject(this);
-
-            return json;
+            return JsonConvert.SerializeObject(
+                this,
+                new JsonSerializerSettings
+                {
+                    DateFormatHandling = DateFormatHandling.IsoDateFormat,
+                    NullValueHandling = NullValueHandling.Ignore,
+                    TypeNameHandling = TypeNameHandling.Auto,
+                    Formatting = Formatting.Indented
+                }
+            );
         }
 
         public static MatchDataSet FromJson(string json)

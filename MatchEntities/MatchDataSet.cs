@@ -138,6 +138,8 @@ namespace MatchEntities
             return dataSet;
         }
 
+        public long MatchId => this.MatchStats.MatchId;
+
         public void AssignMatchId(long matchId)
         {
             foreach (var table in Tables())

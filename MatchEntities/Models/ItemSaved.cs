@@ -1,4 +1,5 @@
 ﻿using MatchEntities.Enums;
+using MatchEntities.Interfaces;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;

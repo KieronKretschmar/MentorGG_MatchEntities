@@ -1,4 +1,5 @@
 ﻿using MatchEntities.Enums;
+using MatchEntities.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Numerics;

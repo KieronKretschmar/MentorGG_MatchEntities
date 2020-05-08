@@ -1,4 +1,5 @@
-﻿using System.Numerics;
+﻿using MatchEntities.Interfaces;
+using System.Numerics;
 
 namespace MatchEntities
 {

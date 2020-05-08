@@ -6,7 +6,12 @@ using System.Numerics;
 
 namespace MatchEntities
 {
-    public partial class HostagePickUp : IMatchDataEntity
+    public partial class HostagePickUp :
+        IMatchDataEntity,
+        IRoundEntity,
+        IIngameEvent
+        //Enable interfaces below by adding IsCt property
+        //IPlayerEvent
     {
         public long MatchId { get; set; }
         public short Round { get; set; }

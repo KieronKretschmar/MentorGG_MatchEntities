@@ -1,11 +1,16 @@
 ﻿using MatchEntities.Enums;
+using MatchEntities.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Numerics;
 
 namespace MatchEntities
 {
-    public partial class PlayerPosition : PlayerViewEvent
+    public partial class PlayerPosition : PlayerViewEvent,
+        IMatchDataEntity,
+        IRoundEntity,
+        IIngameEvent,
+        IPlayerEvent
     {
         private float PlayerVeloX { get; set; }
         private float PlayerVeloY { get; set; }

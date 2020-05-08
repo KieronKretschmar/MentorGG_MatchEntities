@@ -1,11 +1,16 @@
 ﻿using MatchEntities.Enums;
+using MatchEntities.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Numerics;
 
 namespace MatchEntities
 {
-    public partial class WeaponReload : PlayerViewEvent
+    public partial class WeaponReload : PlayerViewEvent,
+        IMatchDataEntity,
+        IRoundEntity,
+        IIngameEvent,
+        IPlayerEvent
     {
 
         public long WeaponReloadId { get; set; }        

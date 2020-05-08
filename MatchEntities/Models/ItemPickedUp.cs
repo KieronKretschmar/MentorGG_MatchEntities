@@ -6,7 +6,12 @@ using System.Collections.Generic;
 
 namespace MatchEntities
 {
-    public partial class ItemPickedUp : IMatchDataEntity
+    public partial class ItemPickedUp :
+        IMatchDataEntity,
+        IRoundEntity,
+        IIngameEvent
+        //Enable interfaces below by adding missing properties
+        //IPlayerEvent
     {
         public long MatchId { get; set; }
         public short Round { get; set; }

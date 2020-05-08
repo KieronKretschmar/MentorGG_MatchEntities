@@ -6,7 +6,13 @@ using System.Numerics;
 
 namespace MatchEntities
 {
-    public partial class Smoke : Grenade, IMatchDataEntity, ILineupAssignable
+    public partial class Smoke : Grenade,
+        IMatchDataEntity,
+        IRoundEntity,
+        IIngameEvent,
+        IPlayerEvent,
+        IGrenadeThrow,
+        ILineupAssignable
     {
         public int LineUp { get; set; }
         public int Target { get; set; }

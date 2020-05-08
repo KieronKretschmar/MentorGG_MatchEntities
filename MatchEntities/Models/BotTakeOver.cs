@@ -5,7 +5,10 @@ using System.Collections.Generic;
 
 namespace MatchEntities
 {
-    public partial class BotTakeOver : IMatchDataEntity
+    public partial class BotTakeOver :
+        IMatchDataEntity,
+        IRoundEntity,
+        IIngameEvent
     {
         public long MatchId { get; set; }
         public long BotTakeOverId { get; set; }

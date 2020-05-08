@@ -6,7 +6,9 @@ using System.Collections.Generic;
 
 namespace MatchEntities
 {
-    public partial class PlayerRoundStats : IMatchDataEntity
+    public partial class PlayerRoundStats :
+        IMatchDataEntity,
+        IRoundEntity
     {
         public PlayerRoundStats()
         {

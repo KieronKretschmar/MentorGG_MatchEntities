@@ -7,7 +7,10 @@ using System.Numerics;
 
 namespace MatchEntities
 {
-    public partial class BombPlant : IMatchDataEntity
+    public partial class BombPlant :
+        IMatchDataEntity,
+        IRoundEntity,
+        IIngameEvent
     {
         public long MatchId { get; set; }
         public short Round { get; set; }

@@ -6,7 +6,12 @@ using System.Numerics;
 
 namespace MatchEntities
 {
-    public partial class He : Grenade,IMatchDataEntity
+    public partial class He : Grenade,
+        IMatchDataEntity,
+        IRoundEntity,
+        IIngameEvent,
+        IPlayerEvent,
+        IGrenadeThrow
     {
         public He()
         {

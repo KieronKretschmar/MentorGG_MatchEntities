@@ -5,7 +5,9 @@ using System.Collections.Generic;
 
 namespace MatchEntities
 {
-    public partial class RoundItem : IMatchDataEntity
+    public partial class RoundItem :
+        IMatchDataEntity,
+        IRoundEntity
     {
         public long MatchId { get; set; }
         public short Round { get; set; }

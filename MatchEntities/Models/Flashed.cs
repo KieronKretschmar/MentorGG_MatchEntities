@@ -6,7 +6,13 @@ using System.Numerics;
 
 namespace MatchEntities
 {
-    public partial class Flashed : IMatchDataEntity
+    public partial class Flashed :
+        IMatchDataEntity,
+        IRoundEntity
+        //Enable interfaces below by adding Time property
+        //IIngameEvent,
+        //IPlayerEvent,
+        //IVictimEvent
     {
         public long MatchId { get; set; }
         public long GrenadeId { get; set; }

@@ -1,4 +1,5 @@
 ﻿using MatchEntities.Enums;
+using MatchEntities.Interfaces;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -6,7 +7,11 @@ using System.Numerics;
 
 namespace MatchEntities
 {
-    public partial class Kill : PlayerEvent
+    public partial class Kill : PlayerEvent,
+        IMatchDataEntity,
+        IRoundEntity,
+        IIngameEvent,
+        IPlayerEvent
     {
         public long KillId { get; set; }
         public EquipmentElement PlayerPrimary { get; set; }

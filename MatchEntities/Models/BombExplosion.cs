@@ -5,7 +5,10 @@ using System.Collections.Generic;
 
 namespace MatchEntities
 {
-    public partial class BombExplosion : IMatchDataEntity
+    public partial class BombExplosion :
+        IMatchDataEntity,
+        IRoundEntity,
+        IIngameEvent
     {
         public long MatchId { get; set; }
         public short Round { get; set; }

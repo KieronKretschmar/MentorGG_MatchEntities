@@ -5,7 +5,12 @@ using System.Collections.Generic;
 
 namespace MatchEntities
 {
-    public partial class ConnectDisconnect : IMatchDataEntity
+    public partial class ConnectDisconnect :
+        IMatchDataEntity,
+        IRoundEntity,
+        IIngameEvent
+        //Enable interfaces below by adding missing properties
+        //IPlayerEvent
     {
         public long MatchId { get; set; }
         public long ConnectDisconnectId { get; set; }

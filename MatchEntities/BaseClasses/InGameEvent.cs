@@ -6,7 +6,7 @@ using System.Text;
 
 namespace MatchEntities
 {
-    public abstract class InGameEvent: IMatchDataEntity
+    public abstract class InGameEvent: IIngameEvent
     {
         public long MatchId { get; set; }
         public short Round { get; set; }

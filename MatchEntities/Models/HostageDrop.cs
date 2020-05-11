@@ -1,11 +1,17 @@
-﻿using Newtonsoft.Json;
+﻿using MatchEntities.Interfaces;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Numerics;
 
 namespace MatchEntities
 {
-    public partial class HostageDrop : IMatchDataEntity
+    public partial class HostageDrop :
+        IMatchDataEntity,
+        IRoundEntity,
+        IIngameEvent
+        //Enable interfaces below by adding IsCt property
+        //IPlayerEvent
     {
         public long MatchId { get; set; }
         public short Round { get; set; }

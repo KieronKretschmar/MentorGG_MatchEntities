@@ -1,11 +1,14 @@
 ﻿using MatchEntities.Enums;
+using MatchEntities.Interfaces;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
 namespace MatchEntities
 {
-    public partial class RoundStats : IMatchDataEntity
+    public partial class RoundStats :
+        IMatchDataEntity,
+        IRoundEntity
     {
         public RoundStats()
         {

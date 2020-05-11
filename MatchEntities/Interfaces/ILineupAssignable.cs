@@ -4,14 +4,17 @@ using System.Collections.Generic;
 using System.Numerics;
 using System.Text;
 
-namespace MatchEntities
+namespace MatchEntities.Interfaces
 {
-    public interface ILineupAssignable
+    public interface ILineupAssignable :
+        IMatchDataEntity,
+        IRoundEntity,
+        IIngameEvent,
+        IPlayerEvent,
+        IGrenadeThrow,
     {
         public int LineUp { get; set; }
         public int Target { get; set; }
         public TargetResult Result { get; set; }
-
-        public Vector3 DetonationPos { get; set; }
     }
 }

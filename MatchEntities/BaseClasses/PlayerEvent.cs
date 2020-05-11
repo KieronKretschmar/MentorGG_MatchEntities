@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using MatchEntities.Interfaces;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Numerics;
@@ -6,7 +7,7 @@ using System.Text;
 
 namespace MatchEntities
 {
-    public abstract class PlayerEvent : InGameEvent
+    public abstract class PlayerEvent : InGameEvent, IPlayerEvent
     {
         public bool IsCt { get; set; }
         public long PlayerId { get; set; }

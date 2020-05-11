@@ -1,11 +1,17 @@
-﻿using Newtonsoft.Json;
+﻿using MatchEntities.Interfaces;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Numerics;
 
 namespace MatchEntities
 {
-    public partial class Flash : Grenade, IMatchDataEntity
+    public partial class Flash : Grenade,
+        IMatchDataEntity,
+        IRoundEntity,
+        IIngameEvent,
+        IPlayerEvent,
+        IGrenadeThrow
     {
         public Flash()
         {

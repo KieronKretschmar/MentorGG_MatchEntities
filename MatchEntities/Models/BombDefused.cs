@@ -1,11 +1,17 @@
-﻿using Newtonsoft.Json;
+﻿using MatchEntities.Interfaces;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
 namespace MatchEntities
 {
     [Newtonsoft.Json.JsonObject]
-    public partial class BombDefused : IMatchDataEntity
+    public partial class BombDefused :
+        IMatchDataEntity,
+        IRoundEntity,
+        IIngameEvent
+        //Enable interfaces below by adding missing properties
+        //IPlayerEvent
     {
         public long MatchId { get; set; }
         public short Round { get; set; }

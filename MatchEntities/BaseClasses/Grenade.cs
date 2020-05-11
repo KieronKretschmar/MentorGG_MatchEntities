@@ -1,8 +1,9 @@
-﻿using System.Numerics;
+﻿using MatchEntities.Interfaces;
+using System.Numerics;
 
 namespace MatchEntities
 {
-    public abstract class Grenade : PlayerViewEvent
+    public abstract class Grenade : PlayerViewEvent, IGrenadeThrow
     {
         public long GrenadeId { get; set; }
 

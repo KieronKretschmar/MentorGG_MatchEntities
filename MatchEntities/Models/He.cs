@@ -1,11 +1,17 @@
-﻿using Newtonsoft.Json;
+﻿using MatchEntities.Interfaces;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Numerics;
 
 namespace MatchEntities
 {
-    public partial class He : Grenade,IMatchDataEntity
+    public partial class He : Grenade,
+        IMatchDataEntity,
+        IRoundEntity,
+        IIngameEvent,
+        IPlayerEvent,
+        IGrenadeThrow
     {
         public He()
         {

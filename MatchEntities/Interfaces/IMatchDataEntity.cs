@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MatchEntities
+namespace MatchEntities.Interfaces
 {
     public interface IMatchDataEntity
     {

@@ -11,7 +11,7 @@ namespace MatchEntities.Interfaces
         IRoundEntity,
         IIngameEvent,
         IPlayerEvent,
-        IGrenadeThrow,
+        IGrenadeThrow
     {
         public int LineUp { get; set; }
         public int Target { get; set; }

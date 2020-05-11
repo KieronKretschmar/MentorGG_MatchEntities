@@ -14,6 +14,7 @@ namespace MatchEntities.Interfaces
         IIngameEvent,
         IPlayerEvent
     {
+        public string Trajectory { get; set; }
         public Vector3 DetonationPos { get; set; }
     }
 }

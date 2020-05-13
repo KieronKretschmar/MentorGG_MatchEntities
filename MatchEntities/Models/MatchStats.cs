@@ -120,7 +120,7 @@ namespace MatchEntities
                 if (value.TryGetValue(StartingFaction.CtStarter, out var ctStarterTeamStats))
                 {
                     Score2 = ctStarterTeamStats.Score;
-                    RealScore2 = terroristStarterTeamStats.RealScore;
+                    RealScore2 = ctStarterTeamStats.RealScore;
                     BombDefuses2 = ctStarterTeamStats.BombDefuses;
                     BombExplodes2 = ctStarterTeamStats.BombExplodes;
                     BombPlants2 = ctStarterTeamStats.BombPlants;

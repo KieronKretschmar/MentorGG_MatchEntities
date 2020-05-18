@@ -3,7 +3,7 @@ using System.Numerics;
 
 namespace MatchEntities
 {
-    public abstract class Grenade : PlayerViewEvent, IGrenadeThrow
+    public abstract class Grenade : PlayerViewEvent, IGrenadeEvent
     {
         public long GrenadeId { get; set; }
 

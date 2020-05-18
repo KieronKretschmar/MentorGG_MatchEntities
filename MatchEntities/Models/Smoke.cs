@@ -11,7 +11,7 @@ namespace MatchEntities
         IRoundEntity,
         IIngameEvent,
         IPlayerEvent,
-        IGrenadeThrow,
+        IGrenadeEvent,
         ILineupAssignable
     {
         public int LineUp { get; set; }

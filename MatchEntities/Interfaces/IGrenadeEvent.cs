@@ -8,7 +8,7 @@ namespace MatchEntities.Interfaces
     /// <summary>
     /// Grenade thrown by a player.
     /// </summary>
-    public interface IGrenadeThrow :
+    public interface IGrenadeEvent :
         IMatchDataEntity,
         IRoundEntity,
         IIngameEvent,

@@ -36,7 +36,7 @@ namespace MatchEntities
         }
 
         public long MatchId { get; set; }
-        public short Round { get; set; }
+        public byte Round { get; set; }
         public StartingFaction WinnerTeam { get; set; }
         public bool OriginalSide { get; set; }
         public bool BombPlanted { get; set; }

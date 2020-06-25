@@ -14,7 +14,7 @@ namespace MatchEntities
         public long BotTakeOverId { get; set; }
         public long PlayerId { get; set; }
         public long BotId { get; set; }
-        public short Round { get; set; }
+        public byte Round { get; set; }
         public int Time { get; set; }
 
         [JsonIgnore]

@@ -14,7 +14,7 @@ namespace MatchEntities
     {
         public long MatchId { get; set; }
         public long ConnectDisconnectId { get; set; }
-        public short Round { get; set; }
+        public byte Round { get; set; }
         public long PlayerId { get; set; }
         public int Time { get; set; }
         public bool Connect { get; set; }

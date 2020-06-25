@@ -17,7 +17,7 @@ namespace MatchEntities
         public long MatchId { get; set; }
         public long GrenadeId { get; set; }
         public long VictimId { get; set; }
-        public short Round { get; set; }
+        public byte Round { get; set; }
         private float VictimPosX { get; set; }
         private float VictimPosY { get; set; }
         private float VictimPosZ { get; set; }

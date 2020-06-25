@@ -13,7 +13,7 @@ namespace MatchEntities
         IIngameEvent
     {
         public long MatchId { get; set; }
-        public short Round { get; set; }
+        public byte Round { get; set; }
         public int Time { get; set; }
         public long PlayerId { get; set; }
         public BombSite Site { get; set; }

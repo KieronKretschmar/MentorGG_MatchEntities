@@ -9,6 +9,6 @@ namespace MatchEntities.Interfaces
     /// </summary>
     public interface IRoundEntity : IMatchDataEntity
     {
-        short Round { get; set; }
+        byte Round { get; set; }
     }
 }

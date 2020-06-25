@@ -14,7 +14,7 @@ namespace MatchEntities
         //IPlayerEvent
     {
         public long MatchId { get; set; }
-        public short Round { get; set; }
+        public byte Round { get; set; }
         public long PlayerId { get; set; }
         public bool IsCt { get; set; }
         public long ItemSavedId { get; set; }

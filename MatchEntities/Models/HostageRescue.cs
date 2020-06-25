@@ -16,7 +16,6 @@ namespace MatchEntities
         public long MatchId { get; set; }
         public short Round { get; set; }
         public int Time { get; set; }
-        public int Tick { get; set; }
         public long PlayerId { get; set; }
         private float PosX { get; set; }
         private float PosY { get; set; }

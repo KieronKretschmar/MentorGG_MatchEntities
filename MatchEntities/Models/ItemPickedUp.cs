@@ -20,7 +20,6 @@ namespace MatchEntities
         public long ItemPickedUpId { get; set; }
         public long ItemId { get; set; }
         public int Time { get; set; }
-        public int Tick { get; set; }
         public EquipmentElement Equipment { get; set; }
         public long? ItemDroppedId { get; set; }
         public bool Gift { get; set; }

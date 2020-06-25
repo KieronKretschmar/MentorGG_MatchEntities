@@ -13,7 +13,6 @@ namespace MatchEntities
         public long MatchId { get; set; }
         public short Round { get; set; }
         public int Time { get; set; }
-        public int Tick { get; set; }
 
         [JsonIgnore]
         public virtual MatchStats MatchStats { get; set; }

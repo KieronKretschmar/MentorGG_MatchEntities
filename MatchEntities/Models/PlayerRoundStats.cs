@@ -100,6 +100,8 @@ namespace MatchEntities
         [JsonIgnore]
         public virtual ICollection<Kill> Deaths { get; set; }
         [JsonIgnore]
+        public virtual ICollection<PlayerJump> PlayerJump { get; set; }
+        [JsonIgnore]
         public virtual ICollection<PlayerPosition> PlayerPosition { get; set; }
         [JsonIgnore]
         public virtual ICollection<RoundItem> RoundItem { get; set; }

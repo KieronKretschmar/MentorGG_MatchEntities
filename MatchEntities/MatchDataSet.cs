@@ -22,6 +22,8 @@ namespace MatchEntities
 
         public List<PlayerRoundStats> PlayerRoundStatsList = new List<PlayerRoundStats>();
 
+        public List<DroppedBombPosition> DroppedBombPositionList = new List<DroppedBombPosition>();
+
         public List<BombPlant> BombPlantList = new List<BombPlant>();
 
         public List<BombDefused> BombDefusedList = new List<BombDefused>();
@@ -80,6 +82,7 @@ namespace MatchEntities
                 PlayerMatchStatsList.Select(x=>x as IMatchDataEntity),
                 RoundStatsList.Select(x=>x as IMatchDataEntity),
                 PlayerRoundStatsList.Select(x=>x as IMatchDataEntity),
+                DroppedBombPositionList.Select(x=>x as IMatchDataEntity),
                 BombPlantList.Select(x=>x as IMatchDataEntity),
                 BombDefusedList.Select(x=>x as IMatchDataEntity),
                 BombExplosionList.Select(x=>x as IMatchDataEntity),

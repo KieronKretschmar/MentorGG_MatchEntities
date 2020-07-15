@@ -72,6 +72,8 @@ namespace MatchEntities
         [JsonIgnore]
         public virtual ICollection<Decoy> Decoy { get; set; }
         [JsonIgnore]
+        public virtual ICollection<DroppedBombPosition> DroppedBombPosition { get; set; }
+        [JsonIgnore]
         public virtual ICollection<FireNade> FireNade { get; set; }
         [JsonIgnore]
         public virtual ICollection<Flash> Flash { get; set; }
@@ -93,6 +95,8 @@ namespace MatchEntities
         public virtual ICollection<ItemSaved> ItemSaved { get; set; }
         [JsonIgnore]
         public virtual ICollection<Kill> Kills { get; set; }
+        [JsonIgnore]
+        public virtual ICollection<PlayerJump> PlayerJump { get; set; }
         [JsonIgnore]
         public virtual ICollection<PlayerPosition> PlayerPosition { get; set; }
         [JsonIgnore]

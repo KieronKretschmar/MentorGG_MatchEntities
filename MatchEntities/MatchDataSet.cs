@@ -48,6 +48,8 @@ namespace MatchEntities
 
         public List<PlayerPosition> PlayerPositionList = new List<PlayerPosition>();
 
+        public List<PlayerJump> PlayerJumpList = new List<PlayerJump>();
+
         public List<Decoy> DecoyList = new List<Decoy>();
 
         public List<FireNade> FireNadeList = new List<FireNade>();
@@ -91,6 +93,7 @@ namespace MatchEntities
                 ItemSavedList.Select(x=>x as IMatchDataEntity),
                 RoundItemList.Select(x=>x as IMatchDataEntity),
                 PlayerPositionList.Select(x=>x as IMatchDataEntity),
+                PlayerJumpList.Select(x=>x as IMatchDataEntity),
                 DecoyList.Select(x=>x as IMatchDataEntity),
                 FireNadeList.Select(x=>x as IMatchDataEntity),
                 HeList.Select(x=>x as IMatchDataEntity),

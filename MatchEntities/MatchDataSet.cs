@@ -22,6 +22,8 @@ namespace MatchEntities
 
         public List<PlayerRoundStats> PlayerRoundStatsList = new List<PlayerRoundStats>();
 
+        public List<DroppedBombPosition> DroppedBombPositionList = new List<DroppedBombPosition>();
+
         public List<BombPlant> BombPlantList = new List<BombPlant>();
 
         public List<BombDefused> BombDefusedList = new List<BombDefused>();
@@ -47,6 +49,8 @@ namespace MatchEntities
         public List<RoundItem> RoundItemList = new List<RoundItem>();
 
         public List<PlayerPosition> PlayerPositionList = new List<PlayerPosition>();
+
+        public List<PlayerJump> PlayerJumpList = new List<PlayerJump>();
 
         public List<Decoy> DecoyList = new List<Decoy>();
 
@@ -78,6 +82,7 @@ namespace MatchEntities
                 PlayerMatchStatsList.Select(x=>x as IMatchDataEntity),
                 RoundStatsList.Select(x=>x as IMatchDataEntity),
                 PlayerRoundStatsList.Select(x=>x as IMatchDataEntity),
+                DroppedBombPositionList.Select(x=>x as IMatchDataEntity),
                 BombPlantList.Select(x=>x as IMatchDataEntity),
                 BombDefusedList.Select(x=>x as IMatchDataEntity),
                 BombExplosionList.Select(x=>x as IMatchDataEntity),
@@ -91,6 +96,7 @@ namespace MatchEntities
                 ItemSavedList.Select(x=>x as IMatchDataEntity),
                 RoundItemList.Select(x=>x as IMatchDataEntity),
                 PlayerPositionList.Select(x=>x as IMatchDataEntity),
+                PlayerJumpList.Select(x=>x as IMatchDataEntity),
                 DecoyList.Select(x=>x as IMatchDataEntity),
                 FireNadeList.Select(x=>x as IMatchDataEntity),
                 HeList.Select(x=>x as IMatchDataEntity),

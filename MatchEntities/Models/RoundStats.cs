@@ -36,11 +36,11 @@ namespace MatchEntities
         }
 
         public long MatchId { get; set; }
-        public short Round { get; set; }
+        public byte Round { get; set; }
         public StartingFaction WinnerTeam { get; set; }
         public bool OriginalSide { get; set; }
         public bool BombPlanted { get; set; }
-        public byte WinType { get; set; }
+        public WinType WinType { get; set; }
         public int RoundTime { get; set; }
         public int StartTime { get; set; }
         public int EndTime { get; set; }
@@ -58,11 +58,11 @@ namespace MatchEntities
         [JsonIgnore]
         public virtual MatchStats MatchStats { get; set; }
         [JsonIgnore]
-        public virtual BombDefused BombDefused { get; set; }
-        [JsonIgnore]
         public virtual BombExplosion BombExplosion { get; set; }
         [JsonIgnore]
-        public virtual BombPlant BombPlant { get; set; }
+        public virtual ICollection<BombDefused> BombDefused { get; set; }
+        [JsonIgnore]
+        public virtual ICollection<BombPlant> BombPlant { get; set; }
         [JsonIgnore]
         public virtual ICollection<BotTakeOver> BotTakeOver { get; set; }
         [JsonIgnore]
@@ -71,6 +71,8 @@ namespace MatchEntities
         public virtual ICollection<Damage> Damage { get; set; }
         [JsonIgnore]
         public virtual ICollection<Decoy> Decoy { get; set; }
+        [JsonIgnore]
+        public virtual ICollection<DroppedBombPosition> DroppedBombPosition { get; set; }
         [JsonIgnore]
         public virtual ICollection<FireNade> FireNade { get; set; }
         [JsonIgnore]
@@ -93,6 +95,8 @@ namespace MatchEntities
         public virtual ICollection<ItemSaved> ItemSaved { get; set; }
         [JsonIgnore]
         public virtual ICollection<Kill> Kills { get; set; }
+        [JsonIgnore]
+        public virtual ICollection<PlayerJump> PlayerJump { get; set; }
         [JsonIgnore]
         public virtual ICollection<PlayerPosition> PlayerPosition { get; set; }
         [JsonIgnore]

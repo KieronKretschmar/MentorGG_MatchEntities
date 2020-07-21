@@ -38,7 +38,7 @@ namespace MatchEntities
         }
 
         public long MatchId { get; set; }
-        public short Round { get; set; }
+        public byte Round { get; set; }
         public long PlayerId { get; set; }
         public int PlayedEquipmentValue { get; set; }
         public int MoneyInitial { get; set; }
@@ -99,6 +99,8 @@ namespace MatchEntities
         public virtual ICollection<Kill> Kills { get; set; }
         [JsonIgnore]
         public virtual ICollection<Kill> Deaths { get; set; }
+        [JsonIgnore]
+        public virtual ICollection<PlayerJump> PlayerJump { get; set; }
         [JsonIgnore]
         public virtual ICollection<PlayerPosition> PlayerPosition { get; set; }
         [JsonIgnore]

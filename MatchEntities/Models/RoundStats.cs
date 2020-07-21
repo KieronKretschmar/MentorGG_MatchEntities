@@ -58,11 +58,11 @@ namespace MatchEntities
         [JsonIgnore]
         public virtual MatchStats MatchStats { get; set; }
         [JsonIgnore]
-        public virtual BombDefused BombDefused { get; set; }
-        [JsonIgnore]
         public virtual BombExplosion BombExplosion { get; set; }
         [JsonIgnore]
-        public virtual BombPlant BombPlant { get; set; }
+        public virtual ICollection<BombDefused> BombDefused { get; set; }
+        [JsonIgnore]
+        public virtual ICollection<BombPlant> BombPlant { get; set; }
         [JsonIgnore]
         public virtual ICollection<BotTakeOver> BotTakeOver { get; set; }
         [JsonIgnore]
